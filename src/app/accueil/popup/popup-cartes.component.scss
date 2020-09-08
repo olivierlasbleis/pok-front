@@ -1,0 +1,62 @@
+.toutesLesCartes
+{
+    width: 250px;
+}
+.mat-form-field{
+    display: flex;
+    width: 100%;
+}
+.carteParCouleur{
+    width: 100%;
+    display: flex;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+.carte{
+    margin-left: -50px;
+    
+}
+
+.boutonCarte{
+    margin-left: -50px;
+}
+
+.carteVide{
+    width: 100%;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+}
+
+@media (max-width: 800px) {
+    h2{
+        font-size: 25px;
+    }
+    .carte {
+      width: 50px;
+      height: 66px;
+      margin-left: -35px;
+    }
+    .carteVide{
+        width: 50px;
+      height: 66px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2{
+        font-size: 20px;
+    }
+    .carte {
+      width: 37px;
+      height: 50px;
+      margin-left: -28px;
+    }
+    .carteVide{
+        width: 37px;
+      height: 50px;
+    }
+
+}

@@ -1,0 +1,17 @@
+
+    <h2>Selectionnez une carte</h2>
+    <div  class = "carteParCouleur">
+        <div [mat-dialog-close]="data" cdkFocusInitial ><img  class = "carte"  *ngFor="let carte of cartesCarreau" src="{{carte.urlPhoto}}" alt="" (click)= "selectionCarte(carte)"></div>
+    </div>
+    <div  class = "carteParCouleur">
+        <div [mat-dialog-close]="data" cdkFocusInitial ><img  class = "carte" *ngFor="let carte of cartesPique" src="{{carte.urlPhoto}}" alt="" (click)= "selectionCarte(carte)"></div>
+    </div>
+    <div  class = "carteParCouleur">
+        <div [mat-dialog-close]="data" cdkFocusInitial ><img  class = "carte"   *ngFor="let carte of cartesCoeur" src="{{carte.urlPhoto}}" alt="" (click)= "selectionCarte(carte)"></div>
+    </div>
+    <div  class = "carteParCouleur">
+        <div [mat-dialog-close]="data" cdkFocusInitial ><img  class = "carte"   *ngFor="let carte of cartesTrefle" src="{{carte.urlPhoto}}" alt="" (click)= "selectionCarte(carte)" ></div> 
+    </div>
+    <div  class = "carteParCouleur">
+        <div [mat-dialog-close]="data" cdkFocusInitial class = "carteVide"><img  class = "carte"    src="{{carteVide.urlPhoto}}" alt="" (click)= "selectionCarte(carteVide)" ></div> 
+    </div>

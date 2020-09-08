@@ -1,0 +1,8 @@
+
+<div *ngIf="ok" class = "echelle-container">
+    <h1>probabilité de gagne</h1>
+    <div *ngFor = "let ech of echelle;let i = index" class = "echelle"> 
+        <p [ngStyle] = "{'width' : '50%'}">entre {{i * 10}} et {{(i + 1) * 10}} %</p>
+        <div [ngStyle] = "{'background-color' : ech , 'width' : '50%','margin' : '5px'}"></div>
+    </div>
+</div>

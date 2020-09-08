@@ -1,0 +1,31 @@
+.echelle{
+    
+    display: flex;
+    height: 43px;
+    
+}
+.echelle-container{
+    width: 100%;
+}
+
+p{
+    font-size : 10px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .echelle{
+        display: flex;
+        height: 25px;
+    }
+    p{
+        font-size : 6px;
+    }
+    
+    h1{
+        font-size: 12px;
+    }
+}

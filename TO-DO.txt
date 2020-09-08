@@ -1,0 +1,10 @@
+Enlever choix carte après selection, rajouter carte vide
+
+Indiquer titres Main, Flop, Turn, River
+
+Faire spinner quand chargement données
+
+Visuel responsive CSS boostrap
+
+Section "comment ça marche?"
+

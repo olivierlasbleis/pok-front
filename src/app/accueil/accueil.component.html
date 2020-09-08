@@ -1,0 +1,70 @@
+
+
+
+<div class = "toutesLesCartes">
+  <div class = "titre">
+    <h2>Votre main</h2>
+    <p>(requis)</p>
+<div class = "main-joueur">
+  
+  <img class="example-card" src="{{carte0.urlPhoto}}" alt=""  (click)="openDialog(0)">
+
+  <img class="example-card" src="{{carte1.urlPhoto}}" alt=""  (click)="openDialog(1)">
+</div>
+</div>
+<div class = "board">
+    <div class = "titre">
+      <h2>Flop</h2>
+      <p>(requis)</p>
+    <div class = "flop">
+      <img class="example-card" src="{{carte2.urlPhoto}}" alt=""  (click)="openDialog(2)">
+    
+      <img class="example-card" src="{{carte3.urlPhoto}}" alt=""  (click)="openDialog(3)">
+
+      <img class="example-card" src="{{carte4.urlPhoto}}" alt=""  (click)="openDialog(4)">
+    </div>
+  </div>
+  <div class = "titre">
+    <h2>Turn</h2>
+    <p>(optionnel)</p>
+    <div class = "turn">
+      <img class="example-card" src="{{carte5.urlPhoto}}" alt=""  (click)="openDialog(5)">
+        
+        
+        </div>
+      </div>
+      <div class = "titre">
+        <h2>River</h2>
+        <p>(optionnel)</p>
+        <div class = "river">
+          <img class="example-card" src="{{carte6.urlPhoto}}" alt=""  (click)="openDialog(6)">
+            
+            
+            </div>
+          </div>
+    </div>
+
+  </div >
+<div class="btn-div">
+    <button type="button" class="btn btn-primary" (click) = "getPrevision()">Calculer</button>
+</div>
+
+
+<p *ngIf="prevision!=null && !spinner" [ngStyle]="{'width': '100%', 'text-align':'center'}">probabilité de gagne totale : {{prevision.pourcentageDeGagne}} %</p>
+    <div class="echelle-container" *ngIf="prevision!=null && !spinner">
+      <app-echelle></app-echelle>
+        <div *ngFor="let tabRange of prevision.rangeVue;"  >
+          <div *ngFor="let range of tabRange"  class = "elementEchelle">
+          <div   [ngStyle]="{'background-color': range.couleur}" 
+          matTooltip=" {{range.main}} : {{range.esperance}} % de gagne" class = "rangeMain" (mouseover)="test()">{{range.main}}</div >
+        </div>
+        </div>
+        
+      </div>
+
+      <div class="spinner-container" *ngIf="spinner">
+        <p>Calcul en cours <br>
+          La bonne nouvelle c'est que plus vous utilisez l'application, plus elle sera rapide</p>
+        <mat-spinner ></mat-spinner>
+        
+      </div>
